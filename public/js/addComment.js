@@ -24,15 +24,15 @@ const postClicked = async (e) => {
 
         if (response.ok) {
             console.log(response.ok);
-            $('#div-reply').removeClass('visible')
-            $('#div-reply').addClass('hidden')
+            $('#addComment').removeClass('visible')
+            $('#addComment').addClass('hidden')
             location.reload();
         } else {
             alert(response.statusText)
         }
 
     } else {
-        alert("Please fill out the reply box in order to post!");
+        alert("Please enter a comment to enable you to post it!");
     }
 
 }
