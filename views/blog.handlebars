@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center div-blog" id={{blog.id}}>
   <h2>{{blog.title}}</h2>
   <p>{{blog.contents}}</p>
   <p>Created by {{blog.user.name}} on {{blog.date_created}}</p>
@@ -15,6 +15,23 @@
   {{/each}}
 
   <p>
-    <button class="btn btn-primary">Add a comment!</button>
+    <button class="btn btn-primary" id="btn-addComment">Add a comment!</button>
   </p>
+
+  <div class="card hidden" id="addComment">
+    <div class="form">
+      <label for="exampleFormControlInput1" class="form-label" style="color: white;">Reply</label>
+      <div class="row">
+        <div class="col-10">
+          <textarea id="reply-content" class="m-3" type="text" style="width: 100%;"></textarea>
+        </div>
+        <div class="col p-3">
+          <button id="btn-post" style="width: 6rem; height: 3rem; font-weight:bold;">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<script src="./js/addComment.js" defer></script>
