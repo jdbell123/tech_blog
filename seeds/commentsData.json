@@ -1,0 +1,32 @@
+[
+  {
+    "blog_id": 1,
+    "comment": "Comment #1a",
+    "date_created": "2021-04-02 16:00:00"
+  },
+  {
+    "blog_id": 1,
+    "comment": "Comment #1b",
+    "date_created": "2021-04-02 17:00:00"
+  },
+  {
+    "blog_id": 2,
+    "comment": "Comment #2a",
+    "date_created": "2021-04-11 13:00:00"
+  },
+  {
+    "blog_id": 3,
+    "comment": "Comment #3a",
+    "date_created": "2021-04-02 13:00:00"
+  },
+  {
+    "blog_id": 4,
+    "comment": "Comment #4a",
+    "date_created": "2021-04-06 09:00:00"
+  },
+  {
+    "blog_id": 5,
+    "comment": "Comment #5a",
+    "date_created": "2021-04-16 07:00:00"
+  }
+]
