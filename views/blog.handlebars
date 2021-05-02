@@ -1,0 +1,20 @@
+<div class="text-center">
+  <h2>{{blog.title}}</h2>
+  <p>{{blog.contents}}</p>
+  <p>Created by {{blog.user.name}} on {{blog.date_created}}</p>
+
+  {{!-- All Comments Section --}}
+  {{#each blog.comments as |comment| }}
+  <div class="card" id={{comment.id}}>
+    <div class="card-body">
+      <p class="card-text">{{comment.comment}}</p>
+      <footer class="blockquote-footer">{{comment.user.name}}, {{comment.date_created}}</footer>
+
+    </div>
+  </div>
+  {{/each}}
+
+  <p>
+    <button class="btn btn-primary">Add a comment!</button>
+  </p>
+</div>
