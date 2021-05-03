@@ -11,7 +11,6 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newBlog);
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -37,14 +36,44 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 router.post('/addComment', async (req, res) => {
-  console.log(req.body);
   try {
     const newComment = await Comments.create({ blog_id: req.body.blog_id, comment: req.body.comment, user_id: req.session.user_id });
 
     res.status(200).json(newComment);
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
+  }
+});
+
+router.get('/checkUser/:id', async (req, res) => {
+  try {
+      const blogData = await Blogs.findOne({
+          where: {
+              user_id: req.session.user_id,
+              id: req.params.id
+          }
+      })
+      if (!blogData) {
+          res.status(404).json(blogData)
+      } else {
+          res.status(200).json(blogData);
+      }
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+      const blogData = await Blogs.update(req.body, {
+          where: {
+              id: req.params.id
+          }
+      })
+
+      res.status(200).json(blogData)
+  } catch (err) {
+      res.status(400).json(err);
   }
 });
 
