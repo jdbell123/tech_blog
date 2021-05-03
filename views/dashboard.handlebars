@@ -1,45 +1,34 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-8">
     <h2>Welcome to your dashboard {{name}}!</h2>
   </div>
-</div>
-
-<div class="row">
-
-  <div class="col-10">
-    {{#each dashboardData as |blog| }}
-    <a href="/blog/{{blog.dataValues.id}}">
-      <div blog-id="{{blog.dataValues.id}}" class="div-blog">
-        <div class="div-blog-title">{{blog.dataValues.title}}</div>
-      </div>
-    </a>
-    {{/each}}
-  </div>
-  <div class="col-2">
+  <div class="col-4">
     <a href='/Create' id="btn-create-blog">
       <button type="button" class="btn btn-lg btn-success">Create a new blog entry</button>
     </a>
   </div>
 </div>
-</div>
 
 {{#if blogs.length}}
-<div class="col-md-6 blog-list">
+<div class="col-auto blog-list">
   <h3>Current Blogs:</h3>
 
   {{#each blogs as |blog|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
+  <div class="row row-cols-2 mb-2 dashboard-blog">
+    <div class="col-8">
       <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2 col-xs-2 btn-update">
+      <button class="btn btn-sm btn-warning" data-id="{{blog.id}}">UPDATE</button>
+    </div>
+    <div class="col-md-2 col-xs-2 btn-delete">
       <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
-      </div>
+    </div>
   </div>
   {{/each}}
 </div>
 {{else}}
-<div class="col-md-6 blog-list">
+<div class="col-md-12 mt-3 btn-delete btn-update">
   <h4>You don't have any blogs created at this time. Now is a great time to create one!</h4>
 </div>
 {{/if}}
