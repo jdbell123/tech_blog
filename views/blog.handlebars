@@ -1,22 +1,46 @@
 <div class="text-center div-blog" id={{blog.id}}>
-  <h2>{{blog.title}}</h2>
-  <p>{{blog.contents}}</p>
-  <p>Created by {{blog.user.name}} on {{blog.date_created}}</p>
+  <div class="blogView">
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.contents}}</p>
+    <p class="sm-text">Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
+  </div>
+
+  <div class="editPost hidden">
+    <h3>Update Post</h3>
+    <textarea class="m-1" id="blog-title" style="width: 95%;" type="text"
+      rows="1">{{blog.title}}</textarea>
+    <textarea id="blog-contents" class="form-input m-1" style="width: 95%;" type="text">{{blog.contents}}</textarea>
+  </div>
+
+  <div class="row button-area mt-3 mb-3">
+    <div class="col btn-edit hidden">
+      <button class="btn btn-warning" id="btn-editPost">Edit Post</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary" id="btn-addComment">Add a comment!</button>
+    </div>
+    <div class="col btn-delete hidden">
+      <button class="btn btn-danger" id="btn-deletePost">Delete Post</button>
+    </div>
+  </div>
+
+  <div class="row button-area-upd mt-3 mb-3 hidden">
+    <div class="col btn-update">
+      <button class="btn btn-success" id="btn-updatePost">Update Post</button>
+    </div>
+  </div>
 
   {{!-- All Comments Section --}}
   {{#each blog.comments as |comment| }}
   <div class="card" id={{comment.id}}>
     <div class="card-body">
       <p class="card-text">{{comment.comment}}</p>
-      <footer class="blockquote-footer">{{comment.user.name}}, {{comment.date_created}}</footer>
+      <footer class="blockquote-footer">{{comment.user.name}}, {{format_date comment.date_created}}</footer>
 
     </div>
   </div>
   {{/each}}
 
-  <p>
-    <button class="btn btn-primary" id="btn-addComment">Add a comment!</button>
-  </p>
 
   <div class="card hidden" id="addComment">
     <div class="form">
