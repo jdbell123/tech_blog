@@ -1,5 +1,5 @@
-var warningTimeout = 5000;
-var timoutNow = 150000;
+var warningTimeout = 60000;
+var timoutNow = 20000;
 var warningTimerID,timeoutTimerID;
 
 function startTimer() {
