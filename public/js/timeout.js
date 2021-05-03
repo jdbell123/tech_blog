@@ -1,5 +1,5 @@
-var warningTimeout = 50000;
-var timoutNow = 60000;
+var warningTimeout = 5000;
+var timoutNow = 150000;
 var warningTimerID,timeoutTimerID;
 
 function startTimer() {
@@ -8,14 +8,11 @@ function startTimer() {
 }
 
 function warningInactive() {
+  console.log("in waarning");
     window.clearTimeout(warningTimerID);
     timeoutTimerID = window.setTimeout(IdleTimeout, timoutNow);
-    $('#modalAutoLogout').modal({
-      escapeClose: false,
-      clickClose: false,
-      showClose: false
-    },
-    'show');
+    // alert("going to log you out!");
+    $('#modalAutoLogout').modal("show");
 }
 
 function resetTimer() {
@@ -54,7 +51,7 @@ const autoLogout = async () => {
 
 $(document).on('click','#btnStayLoggedIn',function(){
     resetTimer();
-    $('#modalAutoLogout').modal('hide');
+    $('#modalAutoLogout').modal("hide");
 });
 
 $(document).ready(function(){
