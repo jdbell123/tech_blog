@@ -1,27 +1,27 @@
 [
   {
     "title": "Blog #1",
-    "contents": "This is the first blog of this site",
+    "contents": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officiis, libero suscipit itaque totam ducimus fuga sed, sint recusandae, molestias ea repudiandae corrupti optio aut ullam nobis mollitia animi unde.",
     "date_created": "2021-04-01 16:00:00"
   },
   {
     "title": "Blog #2",
-    "contents": "This is the second blog of this site",
+    "contents": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officiis, libero suscipit itaque totam ducimus fuga sed, sint recusandae, molestias ea repudiandae corrupti optio aut ullam nobis mollitia animi unde.",
     "date_created": "2021-04-10 13:00:00"
   },
   {
     "title": "Blog #3",
-    "contents": "This is the third blog of this site",
-    "date_created": "2021-04-01 13:00:00"
+    "contents": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officiis, libero suscipit itaque totam ducimus fuga sed, sint recusandae, molestias ea repudiandae corrupti optio aut ullam nobis mollitia animi unde.",
+    "date_created": "2021-04-12 13:00:00"
   },
   {
     "title": "Blog #4",
-    "contents": "This is the fourth blog of this site",
-    "date_created": "2021-04-05 09:00:00"
+    "contents": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officiis, libero suscipit itaque totam ducimus fuga sed, sint recusandae, molestias ea repudiandae corrupti optio aut ullam nobis mollitia animi unde.",
+    "date_created": "2021-04-15 09:00:00"
   },
   {
     "title": "Blog #5",
-    "contents": "This is the fifth blog of this site",
-    "date_created": "2021-04-15 07:00:00"
+    "contents": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officiis, libero suscipit itaque totam ducimus fuga sed, sint recusandae, molestias ea repudiandae corrupti optio aut ullam nobis mollitia animi unde.",
+    "date_created": "2021-04-20 07:00:00"
   }
 ]
