@@ -6,6 +6,9 @@ router.get('/', async (req, res) => {
   try {
     // Get all blogs and JOIN with user data
     const blogsData = await Blogs.findAll({
+      order: [
+        ['id', 'DESC'],
+      ],
       include: [
         {
           model: User,
