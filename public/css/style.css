@@ -1,3 +1,48 @@
+.no-button {
+  border: 0;
+  padding: 0;
+}
+
 .hidden {
   display:none;
+}
+
+a {
+  text-decoration:none;
+}
+
+.blog {
+  border: 2px solid grey;
+}
+
+.blogView {
+  border: 2px solid grey;
+}
+
+.dashboard-blog {
+  border: 2px solid grey;
+}
+
+.sm-text {
+  font-size: small;
+}
+
+.modal {
+  top: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  background: #900;
+  border: 2px solid #fff;
+  -webkit-border-radius:  26px;
+  -moz-border-radius:     26px;
+  -o-border-radius:       26px;
+  -ms-border-radius:      26px;
+  -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
 }
