@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(190, 144, 92, 0.473);
+}
+
 .no-button {
   border: 0;
   padding: 0;
@@ -9,6 +13,24 @@
 
 a {
   text-decoration:none;
+  color: rgb(0, 162, 255);
+}
+
+a:link { 
+  text-decoration: none; 
+}
+
+a:visited {
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: none;
+  color: rgb(145, 255, 0);
+ }
+
+a:active { 
+  text-decoration: none; 
 }
 
 .blog {
