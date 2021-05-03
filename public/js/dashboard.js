@@ -14,6 +14,17 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const updButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+    document.location.replace(`/blog/${id}`);
+  }
+};
+
 document
-  .querySelector('.blog-list')
+  .querySelector('.btn-delete')
   .addEventListener('click', delButtonHandler);
+
+  document
+  .querySelector('.btn-update')
+  .addEventListener('click', updButtonHandler);
